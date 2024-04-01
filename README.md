@@ -1,2 +1,2 @@
-# PipelineComponent
-Test repo for PipelineComponent implementation.
+# Component
+Test repo for Component implementation.
