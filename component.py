@@ -109,7 +109,7 @@ async def main(name: str, listen: str, broadcasts: list):
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description=name)
+    parser = argparse.ArgumentParser(description="Component")
     parser.add_argument(
         "--name",
         type=str,
@@ -134,6 +134,5 @@ if __name__ == "__main__":
     setproctitle(args.name)
 
     trio.run(
-        async_fn=main,
-        args=[args.name, args.listen, args.broadcasts],
+        main, args.name, args.listen, args.broadcasts,
     )
